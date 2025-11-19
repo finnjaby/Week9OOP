@@ -16,4 +16,8 @@ private double balance;
     public String getName() {
         return name;
     }
+
+    public double getBalance() {
+        return balance;
+    }
 }
