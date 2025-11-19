@@ -12,4 +12,8 @@ private double balance;
     public String getAccNo() {
         return accNo;
     }
+
+    public String getName() {
+        return name;
+    }
 }
