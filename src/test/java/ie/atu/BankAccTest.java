@@ -15,6 +15,7 @@ public class BankAccTest {
         account = new BankAccount();
     }
 
+    @Test
     void constructorInitialisation()
     {
         account = new BankAccount("ACC12345", "Anna", 150);
