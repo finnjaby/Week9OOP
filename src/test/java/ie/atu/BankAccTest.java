@@ -22,4 +22,11 @@ public class BankAccTest {
         assertEquals("Anna", account.getName());
         assertEquals(150, account.getBalance());
     }
+
+    @Test
+    void constructorNegativeInitialisation()
+    {
+        Exception ex = assertThrows(IllegalArgumentException.class, () -> new BankAccount("ACC12345", "Anna", -150));
+        assertEquals("Balance must be greater than 0.", ex.getMessage());
+    }
 }
