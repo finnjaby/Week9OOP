@@ -9,6 +9,10 @@ private double balance;
 
     }
 
+    public BankAccount() {
+
+    }
+
     public String getAccNo() {
         return accNo;
     }
