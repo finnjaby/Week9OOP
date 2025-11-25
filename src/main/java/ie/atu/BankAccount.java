@@ -37,4 +37,11 @@ private double balance;
         this.balance += amount;
     }
 
+    public void withdrawal(double amount) {
+        if (amount < 0) {
+            throw new IllegalArgumentException("Negative Withdrawal is not allowed.");
+        }
+        this.balance -= amount;
+    }
+
 }
