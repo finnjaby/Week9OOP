@@ -5,7 +5,7 @@ private String accNo;
 private String name;
 private double balance;
 
-    public BankAccount(String accNo, String name, double balance) {
+    public BankAccount(String accNo, String name, double balance) { //parameterised constructor
     if(balance <= 0){
         throw new IllegalArgumentException("Balance must be greater than 0.");
         }
@@ -14,10 +14,11 @@ private double balance;
     this.balance = balance;
     }
 
-    public BankAccount() {
+    public BankAccount() {  //default constructor
 
     }
 
+    //getters
     public String getAccNo() {
         return accNo;
     }
@@ -30,14 +31,14 @@ private double balance;
         return balance;
     }
 
-    public void deposit(double amount) {
+    public void deposit(double amount) {    //increase balance
         if (amount <= 0) {
             throw new IllegalArgumentException("Deposit amount must be positive.");
         }
         this.balance += amount;
     }
 
-    public void withdrawal(double amount) {
+    public void withdrawal(double amount) {     //decrease balance
         if (amount < 0) {
             throw new IllegalArgumentException("Negative Withdrawal is not allowed.");
         }
