@@ -48,5 +48,22 @@ public class BankAccTest {
             account.deposit(0);
         });
     }
+    @Test
+    public void testWithdrawalSuccess() {
+        account.withdrawal(10);
+
+        assertEquals(90, account.getBalance());
+    }
+    @Test
+    public void testWithdrawalNegative() {
+
+        Exception ex = assertThrows(IllegalArgumentException.class, () -> {
+            account.withdrawal(-5);
+        });
+
+        assertEquals("Negative Withdrawal is not allowed.", ex.getMessage());
+    }
+
+
 }
 
